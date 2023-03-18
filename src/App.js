@@ -18,7 +18,7 @@ function App() {
               </li>
             </ul>
             <button className="connect-wallet-button">
-              Подключить <br /> кошелёк
+              Connect <br /> wallet
             </button>
           </div>
         </nav>

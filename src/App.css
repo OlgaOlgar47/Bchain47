@@ -46,7 +46,7 @@ body {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 25px;
-  background: linear-gradient(to bottom, #3fe8ab 0%, #78cdcd 100%);
+  background: linear-gradient(to bottom, #3fcfe8 0%, #78cdcd 100%);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   color: #ffffff;
   font-size: 16px;
