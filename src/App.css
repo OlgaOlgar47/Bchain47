@@ -1,47 +1,125 @@
-.App {
-  text-align: center;
+/* Общие стили */
+body {
+  font-family: "Inter", sans-serif;
+  background: black;
+}
+
+/* Стили для навбара */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navbar__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin-left: 2rem;
+}
+
+.nav-list li:first-child {
+  margin-left: 0;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.connect-wallet-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, #3fe8ab 0%, #78cdcd 100%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.connect-wallet-button:hover {
+  background: linear-gradient(to top, #3fe8ab 0%, #78cdcd 100%);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили для заголовка и логотипа */
+.App-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./Images/background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 8rem;
+  width: 8rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.App-title {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(63, 232, 171, 0.8), 0 0 20px rgba(54, 96, 96, 0.8);
+  font-size: 3rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50%);
+  animation: appear 1s ease-out forwards, shake 0.5s ease-in-out 3s infinite;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Стили для изображения и подписи */
+.image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.image-container img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 2rem;
 }
 
-.button-connect-wallet {
-  width: 175px;
-  height: 70px;
-  background-color: blanchedalmond;
-  color: black;
-  align-self: center;
-  font-size: 25px;
+.image-caption {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
   text-align: center;
-}
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
